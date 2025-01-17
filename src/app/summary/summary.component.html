@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Summary</h1>
+  <p>
+    Total Rows: <strong>{{ totalRows }}</strong>
+  </p>
+  <p class="text-success">
+    Valid Rows: <strong>{{ validRows }}</strong>
+  </p>
+  <p class="text-danger">
+    Invalid Rows: <strong>{{ invalidRows }}</strong>
+  </p>
+
+  <h2>Results</h2>
+  <div *ngIf="invalidRows > 0">
+    <p class="text-danger">
+      Some rows contain errors. Please fix them and try again.
+    </p>
+  </div>
+  <div *ngIf="invalidRows === 0">
+    <p class="text-success">
+      All rows are valid. Data import successfully completed!
+    </p>
+  </div>
+</div>
